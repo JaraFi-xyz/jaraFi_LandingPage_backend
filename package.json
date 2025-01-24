@@ -1,0 +1,26 @@
+{
+  "name": "server_side",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "handlebars": "^4.7.8",
+    "http-status-codes": "^2.3.0",
+    "mongoose": "^8.9.5",
+    "nodemailer": "^6.10.0",
+    "nodemon": "^3.1.9"
+  }
+}
