@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-  res.send("You are welcom")
+  res.send("You are welcome jaraFi landing page backend")
 })
 
 app.use('/waitlist', waitlistUserRoute)
