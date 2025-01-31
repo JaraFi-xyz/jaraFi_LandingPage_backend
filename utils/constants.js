@@ -1,7 +1,7 @@
 
 const WHITELIST_DOMAINS = [
     'http://localhost:5173',
-    "https://tasksphere-six.vercel.app",
+    "https://www.jarafi.xyz/",
   
   
   ]
