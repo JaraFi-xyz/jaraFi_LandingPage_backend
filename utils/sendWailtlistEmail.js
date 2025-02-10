@@ -22,14 +22,14 @@ const sendWaitlistEmail = async (user) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "sorleu3@gmail.com",
-        pass: "iwfi ozbb cucb mlfr"
+        user: "info@dltafrica.io",
+        pass: "btgc dtfh rjpm htgn"
       },
     });
 
     // Mail options
     const mailConfigurations = {
-      from: `"JaraFi" sorleu3@gmail.com`,
+      from: `"JaraFi" info@dltafrica.io`,
       to: user.email,
       subject: "Welcome to the Waitlist!",
       html: htmlToSend, // Use the compiled HTML
