@@ -20,14 +20,12 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .header {
-      background-color: #4caf50;
-      color: white;
       text-align: center;
       padding: 20px;
+      background-color: #0F0140;
     }
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
+    .logo {
+      max-width: 150px;
     }
     .content {
       padding: 20px;
@@ -58,6 +56,16 @@
     .cta-button:hover {
       background-color: #45a049;
     }
+    .unsubscribe {
+      display: block;
+      margin-top: 15px;
+      font-size: 12px;
+      color: #888888;
+      text-decoration: none;
+    }
+    .unsubscribe:hover {
+      text-decoration: underline;
+    }
     @media only screen and (max-width: 600px) {
       .header h1 {
         font-size: 20px;
@@ -74,18 +82,20 @@
 <body>
   <div class="container">
     <div class="header">
+      <img src="https://imgur.com/a/Eaf98SN" alt="JaraFi Logo" class="logo">
       <h1>Welcome to the Waitlist!</h1>
     </div>
     <div class="content">
       <p>Hi {{fullname}},</p>
       <p>Thank you for joining the waitlist! We're thrilled to have you on board.</p>
       <p>We'll keep you updated with the latest news and notify you as soon as we launch.</p>
-      <p>If you have any questions, feel free to reach out to us at <a href="#">support@jaraFi.com</a>.</p>
+      <p>If you have any questions, feel free to reach out to us at <a href="mailto:team@jaraFi.xyz">team@jaraFi.xyz</a>.</p>
       <a href="{{ctaLink}}" class="cta-button">Learn More</a>
     </div>
     <div class="footer">
       <p>&copy; {{year}} JaraFi. All rights reserved.</p>
       <p>If you didn’t sign up for this, please ignore this email.</p>
+      <a href="{{unsubscribeLink}}" class="unsubscribe">Unsubscribe</a>
     </div>
   </div>
 </body>

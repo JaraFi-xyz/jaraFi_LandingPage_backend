@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//https://imgur.com/a/Eaf98SN
 const waitlistUserSchema = new mongoose.Schema(
   {
     fullname: {
@@ -19,7 +20,7 @@ const waitlistUserSchema = new mongoose.Schema(
         "Please enter a valid email address",
       ],
     },
-    joinedAt: {
+    joinedAt: {  
       type: Date,
       default: Date.now,
     },

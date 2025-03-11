@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 3500;
 const author = process.env.AUTHOR;
 const host = process.env.LOCAL_DEV_APP_HOST
 
+
 app.use(cors(corsOptions))
 app.use(bodyParser.json());
 app.use(express.json());
