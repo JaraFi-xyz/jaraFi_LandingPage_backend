@@ -1,3 +1,9 @@
+const path = require("path");
+const fs = require("fs")
+const handlebars = require("handlebars")
+const nodemailer = require("nodemailer")
+
+
 const sendWaitlistEmail = async (user) => {
   try {
     const filePath = path.join(__dirname, "EmailViews", "waitlistEmailTemplate.html");

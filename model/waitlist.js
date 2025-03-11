@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//https://imgur.com/a/Eaf98SN
+
 const waitlistUserSchema = new mongoose.Schema(
   {
     fullname: {

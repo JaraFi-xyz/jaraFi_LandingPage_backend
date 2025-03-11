@@ -18,6 +18,8 @@ const joinWaitlist = async (req, res) => {
 
       await sendWaitlistEmail(newUser)
 
+      console.log("SUccess")
+
       res.status(201).json({ message: "You have successfully joined the waitlist!" });
 
     } else {
@@ -96,7 +98,7 @@ const unsubscribeUser = async (req, res) => {
       width: 100%;
       padding: 12px;
       margin-top: 20px;
-      background: #4caf50;
+      background: #0f0140;
       color: white;
       text-decoration: none;
       border-radius: 5px;

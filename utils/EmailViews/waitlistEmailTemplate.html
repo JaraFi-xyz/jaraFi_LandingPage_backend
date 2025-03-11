@@ -1,102 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to the Waitlist</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 600px;
-      margin: 20px auto;
-      background: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .header {
-      text-align: center;
-      padding: 20px;
-      background-color: #0F0140;
-    }
-    .logo {
-      max-width: 150px;
-    }
-    .content {
-      padding: 20px;
-      color: #555555;
-      text-align: left;
-    }
-    .content p {
-      margin: 10px 0;
-      line-height: 1.6;
-    }
-    .footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 10px;
-      font-size: 12px;
-      color: #888888;
-    }
-    .cta-button {
-      display: inline-block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #4caf50;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    .cta-button:hover {
-      background-color: #45a049;
-    }
-    .unsubscribe {
-      display: block;
-      margin-top: 15px;
-      font-size: 12px;
-      color: #888888;
-      text-decoration: none;
-    }
-    .unsubscribe:hover {
-      text-decoration: underline;
-    }
-    @media only screen and (max-width: 600px) {
-      .header h1 {
-        font-size: 20px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the Waitlist</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
       }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        padding: 20px;
+        background-color: #0f0140;
+      }
+      
+      .header h1 {
+          font-size: 20px;
+          color: #ffffff;
+        }
+      .logo {
+        max-width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
       .content {
-        padding: 15px;
+        padding: 20px;
+        color: #555555;
+        text-align: left;
+      }
+      .content p {
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+      .footer {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #888888;
       }
       .cta-button {
-        font-size: 14px;
+        display: inline-block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #0f0140;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 16px;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <img src="https://imgur.com/a/Eaf98SN" alt="JaraFi Logo" class="logo">
-      <h1>Welcome to the Waitlist!</h1>
+
+      .cta-button:hover {
+        background-color: #EAF206;
+      }
+      .unsubscribe-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #d9534f; /* Red color */
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .unsubscribe-button:hover {
+        background-color: #c9302c;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .header {
+          padding: 15px 20px;
+
+        }
+        .header h1 {
+          font-size: 20px;
+        }
+        .content {
+          padding: 15px;
+        }
+        .cta-button {
+          font-size: 14px;
+        }
+
+        .logo {
+          max-width: 50px; /* Smaller size for mobile devices */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://i.imgur.com/PJ5k0UU.png"
+          alt="JaraFi Logo"
+          class="logo"
+        />
+        <h1>Welcome to the Waitlist!</h1>
+      </div>
+      <div class="content">
+        <p>Hi {{fullname}},</p>
+        <p>
+          Thank you for joining the waitlist! We're thrilled to have you on
+          board.
+        </p>
+        <p>
+          We'll keep you updated with the latest news and notify you as soon as
+          we launch.
+        </p>
+        <p>
+          If you have any questions, feel free to reach out to us at
+          <a href="mailto:team@jaraFi.xyz">team@jaraFi.xyz</a>.
+        </p>
+        <a href="{{ctaLink}}" class="cta-button">Learn More</a>
+      </div>
+      <div class="footer">
+        <p>&copy; {{year}} JaraFi. All rights reserved.</p>
+        <p>If you didn’t sign up for this, please ignore this email.</p>
+        <a href="{{unsubscribeLink}}" class="unsubscribe-button">Unsubscribe</a>
+      </div>
     </div>
-    <div class="content">
-      <p>Hi {{fullname}},</p>
-      <p>Thank you for joining the waitlist! We're thrilled to have you on board.</p>
-      <p>We'll keep you updated with the latest news and notify you as soon as we launch.</p>
-      <p>If you have any questions, feel free to reach out to us at <a href="mailto:team@jaraFi.xyz">team@jaraFi.xyz</a>.</p>
-      <a href="{{ctaLink}}" class="cta-button">Learn More</a>
-    </div>
-    <div class="footer">
-      <p>&copy; {{year}} JaraFi. All rights reserved.</p>
-      <p>If you didn’t sign up for this, please ignore this email.</p>
-      <a href="{{unsubscribeLink}}" class="unsubscribe">Unsubscribe</a>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
