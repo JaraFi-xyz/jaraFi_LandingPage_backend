@@ -9,6 +9,7 @@ const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const waitlistUserRoute =  require("./routes/waitlist_user")
+const pwaUserRoute = require("./routes/pwa_user")
 
 
 
@@ -17,7 +18,6 @@ const PORT = process.env.PORT || 3500;
 const author = process.env.AUTHOR;
 const host = process.env.LOCAL_DEV_APP_HOST
 
-
 app.use(cors(corsOptions))
 app.use(bodyParser.json());
 app.use(express.json());
@@ -25,10 +25,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-  res.send("You are welcome jaraFi landing page backend")
+  res.send("You are welcom")
 })
 
 app.use('/waitlist', waitlistUserRoute)
+app.use('/pwauser', pwaUserRoute)
 
 console.log('1. Connecting to MongoDB Cloud Atlas...')
 connectDB()
